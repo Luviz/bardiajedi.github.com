@@ -2,9 +2,10 @@
   "name": "bardiajedi.github.com",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,20 @@
     "url": "https://github.com/Luviz/bardiajedi.github.com/issues"
   },
   "homepage": "https://github.com/Luviz/bardiajedi.github.com#readme",
-  "dependencies": {}
+  "dependencies": {
+    "jsx-loader": "^0.13.2",
+    "loadsh": "0.0.4",
+    "lodash": "^4.17.20",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "webpack": "^5.19.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "react-hot-loader": "^4.13.0",
+    "webpack-cli": "^4.4.0"
+  }
 }
