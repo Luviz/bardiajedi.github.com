@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
+  mode: "development",
   entry: {
     index: './src/index.js',
   },
@@ -15,11 +16,15 @@ module.exports = {
       { test: /.jsx$/, use: 'babel-loader' }
     ]
   },
+  devtool: 'inline-source-map',
+  devServer:{
+    contentBase: './dist',  
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "meh"
+      title: "Awesome!"
     }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin({cleanStaleWebpackAssets: true})
   ],
   output: {
     filename: '[name].main.js',
