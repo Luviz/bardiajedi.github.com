@@ -1,25 +1,27 @@
 // master layout
 import * as React from 'react';
-
 import Nav from './nav';
 import * as Pages from './pages/index';
 
-
-export default function Master(){
+export default function Master(p) {
+    console.log("master")
     return <div>
-        <Nav/>
-        <PageRouter/>
-    </div>
+        <Nav />
+        <PageRouter />
+    </div>;
 }
 
-function PageRouter(){
-    // Pages.Home.default();
+function PageRouter() {
+    const [meh, setMeh] = React.useState("true");
     var currPage = window.location.href.split("#")[1] || "Home";
-    console.log();
-    try {
-        return Pages[currPage].default()
+    if (meh === "true"){
+        window.addEventListener('popstate', (a) => { console.log(a), setMeh(new Date())});
+    }
 
-    }catch (e) {
+    try {
+        return Pages[currPage].default();
+    } catch (e) {
+        console.error(e);
         return Pages.NotFound.default();
     }
 }

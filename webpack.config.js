@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: "development",
@@ -13,18 +13,27 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /.jsx$/, use: 'babel-loader' }
+      {
+        test: /.jsx$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/react']
+          }
+        }
+      }
     ]
   },
   devtool: 'inline-source-map',
-  devServer:{
-    contentBase: './dist',  
+  devServer: {
+    contentBase: './dist',
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: "Awesome!"
     }),
-    new CleanWebpackPlugin({cleanStaleWebpackAssets: true})
+    new CleanWebpackPlugin({ cleanStaleWebpackAssets: true })
   ],
   output: {
     filename: '[name].main.js',
