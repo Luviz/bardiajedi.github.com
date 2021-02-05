@@ -1,6 +1,6 @@
 console.log("./src/index.js")
 
 import * as ReactDom from 'react-dom';
-import Nav from './nav';
+import Master from './master';
 
-ReactDom.render(Nav(), document.getElementById("DOM"))
+ReactDom.render(Master(), document.body)
