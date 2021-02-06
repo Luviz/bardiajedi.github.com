@@ -53,4 +53,14 @@ a {
     box-shadow: inset 0px 14px 27px 4px #00000025, 2px 2px 2px 8px rgb(0 0 0 / 0%);
 }
 
+main{
+    display: flexbox;
+    align-items: center;
+}
 
+article {
+    background-color: var(--color-neutralPrimaryAlt);
+    max-width: 800px;
+    margin: 2rem;
+    padding: 1rem;
+}
