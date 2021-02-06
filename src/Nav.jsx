@@ -16,7 +16,7 @@ export function NavItems(props){
         <NavItemIcon text="Likedin" href="https://www.linkedin.com/in/bardia-jedi-3b2699b8/" target={"bjblog-ln"} >
             <LinkedinSvg/>
         </NavItemIcon>
-        <NavItemIcon text="Likedin" href="https://www.linkedin.com/in/bardia-jedi-3b2699b8/" target={"bjblog-ln"} icon="">
+        <NavItemIcon text="Likedin" href="https://github.com/luviz" target={"bjblog-gh"}>
             <GithubSvg/>
         </NavItemIcon>
     </ul>
