@@ -19,8 +19,9 @@ export default function Home() {
             <h2>
                 Career
             </h2>
+            <hr/>
             <h3>
-                Affecto 2016~
+                Affecto 2017~2019 Feb
             </h3>
             <p>
                 I stared me Career at Affecto, as an interner quick signed my contract and started working there.
@@ -29,6 +30,13 @@ export default function Home() {
             </p>
             <p>
                 in 2018 Affecto was pruches by CGI, not nothing changed more the the seanery ...
+            </p>
+            <hr/>
+            <h3>
+                Enfo 2019~
+            </h3>
+            <p>
+                Some text
             </p>
         </article>
         <article>
