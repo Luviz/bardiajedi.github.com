@@ -43,7 +43,7 @@ nav {
     width: 100vw;
     height: 3rem;
     position: fixed;
-    align-items: center;
+    align-items: stretch;
 }
 
 nav,
@@ -55,7 +55,7 @@ ul {
 }
 
 .nav-listItem {
-    padding: 0.5rem 0.5rem;
+    padding: 1rem;
 }
 
 .nav-listItem,
@@ -65,14 +65,15 @@ a {
 }
 
 .nav-listItem:hover {
-    -webkit-box-shadow: inset 0px 14px 27px 4px #00000025, 2px 2px 2px 8px rgb(0 0 0 / 0%);
-    box-shadow: inset 0px 14px 27px 4px #00000025, 2px 2px 2px 8px rgb(0 0 0 / 0%);
+    background: -webkit-linear-gradient(top, #00000000 0%, var(--color-neutralPrimaryAlt) 100%);
+    background: linear-gradient(to bottom, #00000000 0%, var(--color-neutralPrimaryAlt) 100%);
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 2rem;
 }
 
 article {
@@ -81,7 +82,6 @@ article {
     max-width: 800px;
     margin: 2rem;
     margin-block-end: auto;
-    margin-block-start: 4rem;
     padding: 1rem;
     padding-top: 0;
 }
