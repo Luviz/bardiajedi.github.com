@@ -52,12 +52,17 @@ ul {
     margin: 0;
     list-style-type: none;
     display: flex;
+    align-items: flex-end;
+    padding: 0 40px;
 }
 
 .nav-listItem {
     padding: 1rem;
 }
 
+.nav-spacer {
+    flex-grow: 2;
+}
 .nav-listItem >
 a {
     text-decoration: none;
