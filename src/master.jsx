@@ -1,5 +1,5 @@
 // master layout
-import * as React from 'react';
+import React,{createContext, useContext, useEffect, useState} from 'react';
 import Nav from './nav';
 import * as Pages from './pages/index';
 
@@ -12,11 +12,9 @@ export default function Master(p) {
 }
 
 function PageRouter() {
-    const [meh, setMeh] = React.useState("true");
+    const [_, forceUpdate] = useState("true");
     var currPage = window.location.href.split("#")[1] || "Home";
-    if (meh === "true"){
-        window.addEventListener('popstate', (a) => { console.log(a), setMeh(new Date())});
-    }
+    useEffect(()=>window.addEventListener('popstate', (a) => { console.log(a), forceUpdate(new Date())}), [])
 
     try {
         return Pages[currPage].default();
