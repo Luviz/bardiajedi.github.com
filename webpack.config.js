@@ -35,7 +35,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Awesome!"
+      title: "Bardia Jedi"
     }),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: true })
   ],

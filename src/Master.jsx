@@ -16,7 +16,7 @@ function PageRouter() {
     const [_, forceUpdate] = useState("true");
     var currPage = window.location.href.split("#")[1] || "Home";
     useEffect(()=>window.addEventListener('popstate', (a) => { console.log(a), forceUpdate(new Date())}), [])
-
+        document.title = `Bardia Jedi ${currPage}`;
     try {
         return Pages[currPage].default();
     } catch (e) {
