@@ -1,7 +1,8 @@
 // master layout
 import React,{createContext, useContext, useEffect, useState} from 'react';
-import Nav from './nav';
+import Nav from './Nav';
 import * as Pages from './pages/index';
+import stlyes from './styles.css'
 
 export default function Master(p) {
     console.log("master")

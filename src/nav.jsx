@@ -15,7 +15,7 @@ export function NavItems(props){
 }
 
 export function NavItem(props){
-    return <li>
+    return <li className="nav-listItem">
         <a href={props.href}>
             {/* // icon */}
             <span>{props.text}</span>
