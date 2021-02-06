@@ -17,6 +17,8 @@
     --color-neutralLighterAlt: #faf9f8;
 
     color: var(--color-neutralLight);
+    /* transition: box-shadow 0.3s ease-in-out; */
+    transition: 200ms ease-in ;
 }
 
 body {
@@ -64,5 +66,11 @@ article {
     width: 80vw;
     max-width: 800px;
     margin: 2rem;
+    margin-block-end: auto;
     padding: 1rem;
+    padding-top: 0;
+}
+
+article:hover {
+    box-shadow: rgba(0, 0, 0, 0.125) 3px 6px 8px 2px;
 }
