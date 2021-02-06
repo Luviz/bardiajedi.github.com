@@ -46,7 +46,7 @@ nav {
     align-items: stretch;
 }
 
-nav,
+nav >
 ul {
     background-color: var(--color-neutralPrimary);
     margin: 0;
@@ -58,7 +58,7 @@ ul {
     padding: 1rem;
 }
 
-.nav-listItem,
+.nav-listItem >
 a {
     text-decoration: none;
     color: var(--color-neutralTertiary);
