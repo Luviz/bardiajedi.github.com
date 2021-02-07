@@ -20,7 +20,6 @@ export default function Home() {
             <p>
                 When this site is published it will be host on Github pages.
             </p>
-            
         </article>
     </main>
 }
