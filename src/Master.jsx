@@ -21,6 +21,6 @@ function PageRouter() {
         return Pages[currPage].default();
     } catch (e) {
         console.error(e);
-        return <NotFound mess={e.message}/>
+        return <NotFound message={e.message}/>
     }
 }

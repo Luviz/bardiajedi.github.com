@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Cog, CogPathOnly } from '../assets/svg/NavIcons'
 import Article from '../Components/Artical';
 export default function NotFound(p) {
-    const [showError, setError] = useState(true);
+    const [showError, setError] = useState(false);
     return <main className="notFound">
         <div className="nf-art">
             <Cog className="nf-art-cog1" />
@@ -12,8 +12,8 @@ export default function NotFound(p) {
         <h3 onClick={() => setError(!showError)}>
             It seems like something's stuck!
         </h3>
-        <div hidden={showError}>
-            {p?.mess}
+        <div  className={showError ? "nf-error-msg-hidden": "nf-error-msg"}>
+            {p?.message || "no erro message"}
         </div>
         <Article lable="Looking for my blog?">
             <p>
