@@ -54,7 +54,50 @@ export default function Career() {
             Enfo 2019~
         </h3>
         <p>
-            Some text
+            I started my role as a lead developer.
+            At the start I was lead dev in name only.
+            Slowly but surely, I got more and more responsibilities under my wing,
+            it was a different feeling, a different set of challenges,
+            and other ways of thinking or dealing with issues.
         </p>
+        <p>
+            I needed to realize just because I could solve a problem did not mean that I should do so.
+            Because as I delivered more, I became the only person to fix the problems on the fly.
+            I needed to realize that team was there to help me,
+            taking over and solving problems or implementing new features would fill up my schedule more then it should.
+            Near the end I was juggling ~6 development projects.
+        </p>
+        <p>
+            What happed was that I more and more work on my desk until was unable to think clearly.
+        </p>
+        <p>
+            In my line of work thinking is the most important thing a developer should be able to do.
+            Thinking is the difference between a developer and a programmer.
+            Whereas a programmer can write code from function to function, model to object.
+            It is the job of the developer to design the software.
+            It is by thinking about your software before writing anything at all,
+            that you can identify problems before they occur,
+            and this workflow is what makes me one of the fasted developers within my circle.
+            Because when you have it all figured out all you need is some Metallica and a keyboard.
+            Close your thoughts and write...
+        </p>
+        <p>
+            So back to what I was talking about before this paragraph.
+            The stress made me lose track over the simplest design pattern software developers use.
+            And that is proportional expansion of requests to server.
+            In short, my solution was way to slow!
+            Problems like these are usually solved by views in SQL databases.
+        </p>
+        <p>
+            Don’t worry I solved the problem, and now the solution is much faster.
+        </p>
+        <p>
+            After identifying the problem, I made some major changes to my way of work. 
+            I needed to trust in my devs and give them plenty of opportunity to grow, 
+            this is something I didn’t experience because I have mostly worked alone. 
+            I have stop looking at code unless the dev is completely unable to visualize the problem and therefore the solution. 
+            Talk less, let the dev logic their way throw it.
+        </p>
+        <p>More to come, just wait...</p>
     </div>
 }
