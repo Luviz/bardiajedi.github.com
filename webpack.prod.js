@@ -2,6 +2,7 @@ const webpack = require('webpack')
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "production",
@@ -25,18 +26,24 @@ module.exports = {
       },
       {
         test:/.css$/,
-        use: ['style-loader','css-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader'
+        ]
       }
     ]
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: "[name]-[contenthash].css"
+    }),
     new HtmlWebpackPlugin({
       title: "Bardia Jedi"
     }),
-    new CleanWebpackPlugin({ cleanStaleWebpackAssets: true })
+    new CleanWebpackPlugin({ cleanStaleWebpackAssets: true }),
   ],
   output: {
-    filename: '[name].main-[contenthash].js',
+    filename: '[name]-[contenthash].js',
     path: path.resolve(__dirname, 'out'),
   },
   optimization: {
