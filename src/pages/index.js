@@ -1,5 +1,2 @@
-const { default: Home } = require("./Home");
-
-export * from './Home';
-export * from './About';
-export * from './NotFound';
+export * as Home from './Home';
+export * as About from './About';
