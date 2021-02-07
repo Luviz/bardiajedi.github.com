@@ -116,12 +116,15 @@ article:hover {
 }
 
 .nf-error-msg {
-    animation: fade-in-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    transform: scale(1);
+    opacity: 1;
+    transition: all 400ms ease-in;
 }
 
 .nf-error-msg-hidden {
-    animation: fade-out-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-    /* display: none; */
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 400ms ease-in;
 
 }
 
@@ -165,27 +168,5 @@ article:hover {
     100% {
         -webkit-transform: rotate(19deg);
         transform: rotate(19deg);
-    }
-}
-
-@keyframes fade-in-center {
-    0% {
-        transform: scale(0);
-        filter: opacity(0);
-    }
-    100% {
-        transform: scale(1);
-        filter: opacity(1);
-    }
-}
-
-@keyframes fade-out-center {
-    0% {
-        transform: scale(1);
-        filter: opacity(1);
-    }
-    100% {
-        transform: scale(0);
-        filter: opacity(0);
     }
 }
