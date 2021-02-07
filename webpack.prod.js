@@ -37,7 +37,7 @@ module.exports = {
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: true })
   ],
   output: {
-    filename: '[name].main.js',
+    filename: '[name].main-[contenthash].js',
     path: path.resolve(__dirname, 'out'),
   },
   optimization: {
