@@ -46,8 +46,7 @@ nav {
     align-items: stretch;
 }
 
-nav >
-ul {
+nav > ul {
     background-color: var(--color-neutralPrimary);
     margin: 0;
     list-style-type: none;
@@ -64,18 +63,16 @@ ul {
 }
 
 .nav-listItemIcon:hover {
-    filter: opacity(0.50);
+    filter: opacity(0.5);
 }
 
 .nav-spacer {
     flex-grow: 2;
 }
-.nav-listItem >
-a {
+.nav-listItem > a {
     text-decoration: none;
     color: var(--color-neutralTertiary);
 }
-
 
 .nav-listItem:hover {
     background: -webkit-linear-gradient(top, #00000000 0%, var(--color-neutralPrimaryAlt) 100%);
@@ -83,21 +80,21 @@ a {
 }
 
 .nav-svg {
-    fill:var(--color-neutralTertiary)
+    fill: var(--color-neutralTertiary);
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2rem;
+    padding-top: 3rem;
 }
 
 article {
     background-color: var(--color-neutralPrimaryAlt);
     width: 80vw;
     max-width: 800px;
-    margin: 2rem;
+    margin: 1rem;
     margin-block-end: auto;
     padding: 1rem;
     padding-top: 0;
@@ -106,3 +103,45 @@ article {
 article:hover {
     box-shadow: rgba(0, 0, 0, 0.125) 3px 6px 8px 2px;
 }
+
+.nf-art{
+    width: 400px;
+    height: 400px;
+}
+
+.nf-art-cog1 {
+    position: relative;
+    left: 24px;
+}
+.nf-art-cog2 {
+    position: relative;
+    top:61px
+}
+.nf-art-cog3 {
+    position: relative;
+    top:6px;
+    right: 17px;
+    -webkit-animation: rotate-center 1s cubic-bezier(0.61,-0.1, 1, 1) 0s infinite alternate backwards;
+	        animation: rotate-center 1s cubic-bezier(0.61,-0.1, 1, 1) 0s infinite alternate backwards;
+}
+
+@-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(5deg);
+              transform: rotate(5deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(5deg);
+              transform: rotate(5deg);
+    }
+    100% {
+      -webkit-transform: rotate(19deg);
+              transform: rotate(19deg);
+    }
+  }
