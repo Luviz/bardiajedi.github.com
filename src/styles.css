@@ -116,7 +116,6 @@ article:hover {
 }
 
 .nf-error-msg {
-
     animation: fade-in-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
@@ -171,12 +170,10 @@ article:hover {
 
 @keyframes fade-in-center {
     0% {
-        -webkit-transform: scale(0.5);
-        transform: scale(0.5);
+        transform: scale(0);
         filter: opacity(0);
     }
     100% {
-        -webkit-transform: scale(1);
         transform: scale(1);
         filter: opacity(1);
     }
@@ -184,13 +181,11 @@ article:hover {
 
 @keyframes fade-out-center {
     0% {
-        -webkit-transform: scale(1);
         transform: scale(1);
         filter: opacity(1);
     }
     100% {
-        -webkit-transform: scale(0.5);
-        transform: scale(0.5);
+        transform: scale(0);
         filter: opacity(0);
     }
 }
