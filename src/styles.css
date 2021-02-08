@@ -71,6 +71,7 @@ nav > ul {
 
 .nav-listItemIcon:hover {
     filter: opacity(0.5);
+    transition: all ease-in-out 500ms;
 }
 
 .nav-spacer {
@@ -79,6 +80,29 @@ nav > ul {
 .nav-listItem > a {
     text-decoration: none;
     color: var(--color-neutralTertiary);
+}
+
+.nav-spacer > a > svg:hover {
+    filter: opacity(0.5);
+    transition: all ease-in-out 500ms;
+}
+
+.nav-spacer > a > svg {
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+}
+
+#Icon-BJ:hover > #Icon-BJ-BJ {
+    fill: cyan;
+}
+
+#Icon-BJ-Backgroup {
+    fill: var(--color-neutralTertiary);
+}
+
+#Icon-BJ-BJ {
+    fill: var(--color-neutralDark);
 }
 
 .nav-listItem:hover {
@@ -125,7 +149,6 @@ article:hover {
     transform: scale(0.5);
     opacity: 0;
     transition: all 400ms ease-in;
-
 }
 
 .nf-art {

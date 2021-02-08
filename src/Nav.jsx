@@ -1,5 +1,5 @@
 import React from 'react';
-import {GithubSvg, LinkedinSvg} from './assets/svg/NavIcons'
+import {BJIcon, GithubSvg, LinkedinSvg} from './assets/svg/NavIcons'
 
 export default function Nav(prop) {
     return <nav>
@@ -12,7 +12,11 @@ export function NavItems(props){
         <NavItem text="Home" href="#" icon=""/>
         <NavItem text="Blog" href="#Blog" icon=""/>
         <NavItem text="About" href="#About" icon=""/>
-        <li className="nav-spacer"></li>
+        <li className="nav-spacer">
+            <a href="/">
+                <BJIcon width="40" height="40"/>
+            </a>
+        </li>
         <NavItemIcon text="Likedin" href="https://www.linkedin.com/in/bardia-jedi-3b2699b8/" target={"bjblog-ln"} >
             <LinkedinSvg/>
         </NavItemIcon>
