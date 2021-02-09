@@ -93,6 +93,12 @@ nav > ul {
     left: 50%;
 }
 
+@media only screen and (max-width: 600px) {
+    .nav-spacer > a > svg {
+        position: initial;
+    }
+}
+
 #Icon-BJ:hover > #Icon-BJ-BJ {
     fill: cyan;
 }

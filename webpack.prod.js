@@ -38,7 +38,8 @@ module.exports = {
       filename: "[name]-[contenthash].css"
     }),
     new HtmlWebpackPlugin({
-      title: "Bardia Jedi"
+      title: "Bardia Jedi",
+      favicon:"./src/assets/favicon.png"
     }),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: true }),
   ],

@@ -35,7 +35,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Bardia Jedi"
+      title: "Bardia Jedi",
+      favicon:"./src/assets/favicon.png"
     }),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: true })
   ],
