@@ -199,3 +199,18 @@ article:hover {
         transform: rotate(19deg);
     }
 }
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-container img {
+    width: min-content;
+}
+
+code {
+    background-color: var(--color-neutralPrimary);
+    padding: 0.25rem;
+}
