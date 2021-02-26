@@ -7,9 +7,6 @@ export default function Sim() {
     </main>
 }
 
-
-
-
 class Meh extends React.Component {
     constructor(p) {
         super(p)
