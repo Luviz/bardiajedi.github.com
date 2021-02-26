@@ -1,6 +1,15 @@
 import React from 'react';
 import img from '../assets/the-potato.png'
 
+function PotatoForm(p) {
+
+    return <from className={"potato-form-container"}>
+        <label htmlFor="userAlias">Alias:</label>
+        <input autoComplete="off" type="text" name="userAlias" id="userAlias" />
+        <input type="submit" value="Take the Potato" onClick={console.log}/>
+    </from>
+}
+
 export default function Potato() {
     return <main>
         <article>
@@ -20,6 +29,7 @@ export default function Potato() {
                 <li>Think of a target.</li>
                 <li>Make them click the link!</li>
             </ol>
+            <PotatoForm />
             <p>
                 Give me a bit a of break the game is quick limited at the moment,
                 and I would like you not use shotgun attacks. <br />

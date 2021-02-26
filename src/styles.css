@@ -214,3 +214,37 @@ code {
     background-color: var(--color-neutralPrimary);
     padding: 0.25rem;
 }
+
+.potato-form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.potato-form-container input,
+label {
+    margin: 0.25rem;
+    width: min-content;
+}
+
+
+input {
+    border: none;
+    height: 1.25rem;
+    border-radius: 0.15rem;
+    background-color: var(--color-neutralSecondary);
+    color: var(--color-neutralQuaternaryAlt);
+    transition: all 500ms ease-in-out;
+
+}
+
+input:hover {
+    background-color: var(--color-neutralQuaternaryAlt);
+    color: var(--color-neutralSecondary);
+    transition: all 500ms ease-in-out;
+    /* color: var(--color-neutralQuaternary); */
+
+}
+
+input[type='text'] {
+    padding-left: 0.5rem;
+}
