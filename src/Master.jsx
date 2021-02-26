@@ -15,9 +15,12 @@ export default function Master(p) {
 
 function PageRouter() {
     const [_, forceUpdate] = useState("true");
-    var currPage = window.location.href.split("#")[1] || "Home";
     useEffect(() => window.addEventListener('popstate', (a) => { forceUpdate(new Date()) }), [])
-    document.title = `Bardia Jedi ${currPage}`;
+    const pageBreakDown = window.location.href.match(/#(\w+)/) || []
+    const hashValue = pageBreakDown[1] || "Home";
+    // case ambiguous
+    const currPage = Object.keys(Pages).find(p => p.toLowerCase() === hashValue.toLowerCase()) 
+    document.title = `Bardia Jedi - ${currPage}`;
     try {
         return Pages[currPage].default();
     } catch (e) {
