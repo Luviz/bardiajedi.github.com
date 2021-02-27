@@ -246,6 +246,10 @@ input[type="text"] {
     padding-left: 0.5rem;
 }
 
+.error {
+    color: red;
+}
+
 .table-container {
     width: auto;
     display: flex;
@@ -279,37 +283,3 @@ tr:hover {
     transition: all 0.5s ease-in;
     border: 0;
 }
-
-/* 
-.table {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.table .table-header-row {
-    display: flex;
-    flex-direction: initial;
-    justify-content: space-around;
-}
-
-.table .table-row {
-    display: flex;
-    flex-direction: initial;
-    justify-content: space-around;
-} */
-/* 
-.table .table-header-row div,
-.table .table-row div {
-    flex-grow: 2;
-}
-
-.table .table-header-row div:first-child,
-.table .table-row div:first-child {
-    flex-grow: 2;
-}
-
-.table .table-header-row div:last-child,
-.table .table-row div:last-child {
-    flex-grow: 1;
-} */

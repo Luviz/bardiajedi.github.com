@@ -2,13 +2,24 @@ import React, { useEffect, useState } from 'react';
 import img from '../assets/the-potato.png'
 import { CleanDateTime } from "../util";
 
+const potatoApi = "https://bj-potato.azurewebsites.net/api/potato";
+
 export default function Potato() {
     return <PotatoContent />
 }
 
 function PotatoForm(p) {
+    const [resContent, setResContent] = useState("")
+    const [errors, setErrors] = useState("")
     const { href } = window.location;
     const keyPair = href.split('#')[1].split('=');
+    if (resContent.length > 0) {
+        const url = new URL(window.location.href);
+        return <div>
+            <label>here is you link:</label>
+            <input type="text"  style={{ width: "15rem" }} value={`${url.origin}/#potato=${resContent}`} />
+        </div> 
+    }
     if (keyPair.length < 2) {
         return <div>
             I don't think you're it! <br />
@@ -20,19 +31,43 @@ function PotatoForm(p) {
     }
     if (p.latest.RowKey === keyPair[1]) {
 
-        return <form className={"potato-form-container"} onSubmit={e => e.preventDefault()}>
+        return <form className={"potato-form-container"} onSubmit={e => {
+            const fd = new FormData(e.target);
+            const uA = fd.get("userAlias");
+            if (uA.length >= 3) {
+                setErrors("")
+                CallThePotatoApi(uA);
+            } else {
+                setErrors("Hey I need 3 charactars, here!")
+            }
+            e.preventDefault()
+        }}>
             <label htmlFor="userAlias">Alias:</label>
-            <input autoComplete="off" type="text" name="userAlias" id="userAlias" />
+            <input autoComplete="off" type="text" id="userAlias" name="userAlias" onChange={(e) => ""} />
             <input type="submit" value="Take the Potato" onClick={console.log} />
+            <span className={'error'}>{errors}</span>
         </form>
     } else {
         return <div>Sorry, But there is no potato here anymore!</div>
+    }
+
+    function CallThePotatoApi(uA) {
+        var headers = new Headers();
+        headers.append("Content-Type", "application/json");
+        fetch(potatoApi, {
+            method: "POST",
+            headers,
+            body: JSON.stringify({ name: uA }),
+            redirect: 'follow'
+        })
+            .then(res => res.json())
+            .then(rData => setResContent(rData.hashBody));
     }
 }
 
 function getPotatoHolder() {
     try {
-        return fetch("https://bj-potato.azurewebsites.net/api/potato").then(res => res.json());
+        return fetch(potatoApi).then(res => res.json());
     } catch (e) {
         console.log(e)
     }
