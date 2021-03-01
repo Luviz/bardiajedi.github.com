@@ -5,7 +5,7 @@ name: Tagger
 
 on:
   create:
-    tags: v\.*
+    tag: v\.*
 
 jobs:
   build:
