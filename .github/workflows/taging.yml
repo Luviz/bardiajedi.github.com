@@ -4,8 +4,9 @@
 name: Tagger
 
 on:
-  create:
-    tag: v\.*
+  push:
+    tags: 
+      - 'v*'
 
 jobs:
   build:
@@ -14,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
+        node-version: [14.x, 15.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
