@@ -142,7 +142,7 @@ function PotatoContent() {
             <ul>
                 <li>Anything gose! It doesn't matter how they get as long as the URL code is intact!</li>
                 <li>Be honorable! Fare and square, just register yourself and find another target.</li>
-                <li>Be fare! Nobody likes to hurt a poppy, pick a target will continue the game on.</li>
+                <li>Be fare! Nobody likes to hurt a puppy, pick a target will continue the game on.</li>
             </ul>
             <h3>What is a valid hit</h3>
             <p>
