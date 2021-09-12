@@ -283,3 +283,23 @@ tr:hover {
     transition: all 0.5s ease-in;
     border: 0;
 }
+
+
+.icon-heart::before {
+    content: '🧡';
+}
+.icon-circle-red::before {
+    content: '🔴';
+}
+.icon-circle-black::before {
+    content: '⚫';
+}
+.icon-circle-yellow::before {
+    content: '🟡';
+}
+.icon-diamond-blue::before {
+    content: '🔷';
+}
+.icon-diamond-orange::before {
+    content: '🔶';
+}
