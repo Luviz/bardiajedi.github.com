@@ -13,14 +13,14 @@ export function NavItems(props){
         <NavItem text="Blog" href="#Blog" icon=""/>
         <NavItem text="About" href="#About" icon=""/>
         <li className="nav-spacer">
-            <a href="/">
+            <a aria-label="Bardia Jedi" href="/">
                 <BJIcon width="40" height="40"/>
             </a>
         </li>
         <NavItemIcon text="Likedin" href="https://www.linkedin.com/in/bardia-jedi-3b2699b8/" target={"bjblog-ln"} >
             <LinkedinSvg/>
         </NavItemIcon>
-        <NavItemIcon text="Likedin" href="https://github.com/luviz" target={"bjblog-gh"}>
+        <NavItemIcon text="Github" href="https://github.com/luviz" target={"bjblog-gh"}>
             <GithubSvg/>
         </NavItemIcon>
     </ul>
@@ -37,7 +37,7 @@ export function NavItem(props){
 
 export function NavItemIcon(props){
     return <li className="nav-listItemIcon">
-        <a href={props.href} target={props.target}>
+        <a aria-label={props.text ?? ""} href={props.href} target={props.target}>
             {/* // icon */}
             {props.children}
         </a>

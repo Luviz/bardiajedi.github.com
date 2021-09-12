@@ -15,7 +15,7 @@ export default function NotFound(p) {
         <div className={showError ? "nf-error-msg-hidden": "nf-error-msg"}>
             {p?.message || "no erro message"}
         </div>
-        <Article lable="Looking for my blog?">
+        <Article label="Looking for my blog?">
             <p>
                 My blog need to be migrated over to here. <a href="https://perspective.bardiajedi.com/">Blog</a>
             </p>

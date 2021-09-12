@@ -43,7 +43,12 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: "Bardia Jedi",
-      favicon:"./src/assets/favicon.png"
+      favicon:"./src/assets/favicon.png",
+      meta: {
+        viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        lang: "en-us",
+        description: "The Blog of Bardia Jedi Software developer"
+      }
     }),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: true }),
   ],

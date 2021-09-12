@@ -6,13 +6,13 @@ import Projects from './about/Projects';
 
 export default function Home() {
     return <main>
-        <Article lable="About">
+        <Article label="About">
            <Me/>
         </Article>
-        <Article lable="Career">
+        <Article label="Career">
             <Career/>
         </Article>
-        <Article lable="Projects">
+        <Article label="Projects">
            <Projects/>
         </Article>
     </main>

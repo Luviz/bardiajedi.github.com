@@ -24,12 +24,12 @@ module.exports = {
         }
       },
       {
-        test:/.css$/,
-        use: ['style-loader','css-loader']
+        test: /.css$/,
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use:"file-loader"
+        use: "file-loader"
       }
     ]
   },
@@ -40,7 +40,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Bardia Jedi",
-      favicon:"./src/assets/favicon.png"
+      favicon: "./src/assets/favicon.png",
+      meta: {
+        viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        lang: "en-us",
+        description: "The Blog of Bardia Jedi Software developer"
+      }
+
     }),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: true })
   ],

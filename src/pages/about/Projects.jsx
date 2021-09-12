@@ -34,12 +34,12 @@ export default function Projects() {
         </p>
         <p>
             It allows end users:
-            <ol>
-                <li>To find their teams</li>
-                <li>Search after teams that they might want/need to join.</li>
-                <li>Interface with extended functionalities that we deliver.</li>
-            </ol>
         </p>
+        <ol>
+            <li>To find their teams</li>
+            <li>Search after teams that they might want/need to join.</li>
+            <li>Interface with extended functionalities that we deliver.</li>
+        </ol>
         <hr />
         <h3>
             Microsoft Teams Provisioning utilities/ flow. (2019~2020)
